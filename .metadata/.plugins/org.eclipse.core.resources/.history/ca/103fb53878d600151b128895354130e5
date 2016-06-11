@@ -1,0 +1,16 @@
+package com.technical.generic;
+
+public class FindDeepestNode {
+	
+	public static void findDeepest(Tree node)
+	{
+		ArrayList<Tree> list = new ArrayList<Tree>();
+		findDeeper(node);
+	}
+	
+	private static void findDeeper(Tree node)
+	{
+		
+	}
+
+}

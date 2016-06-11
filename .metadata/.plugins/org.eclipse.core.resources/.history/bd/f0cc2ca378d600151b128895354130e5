@@ -1,0 +1,29 @@
+package com.technical.generic;
+
+import java.util.ArrayList;
+
+public class FindDeepestNode {
+	
+	int maxdeepnode=0;
+	
+	public static void findDeepest(Tree node)
+	{
+		ArrayList<Tree> list = new ArrayList<Tree>();
+		findDeeper(node,list);
+	}
+	
+	private static void findDeeper(Tree node,ArrayList<Tree> list)
+	{
+		if(node == null)
+		{
+			return;
+		}
+		list.add(node);
+		if(node.right == null && node.left == null)
+		{
+			
+		}
+	}
+	
+
+}

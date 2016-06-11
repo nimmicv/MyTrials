@@ -1,0 +1,42 @@
+package com.technical.hackerranl;
+
+import java.io.*;
+import java.util.*;
+import java.text.*;
+import java.math.*;
+import java.util.regex.*;
+
+public class JimOrder {
+	class node implements Comparable<node>
+	{
+		int index;
+		int start_time;
+		int process_time;
+		
+		public node(int index,int s_time,int p_time)
+		{
+			this.index = index;
+			this.start_time = s_time;
+			this.process_time = p_time;
+		}
+		@Override
+		public int compareTo(node o) {
+			// TODO Auto-generated method stub
+			return 0;
+		}
+	}
+
+    public static void main(String[] args) throws IOException {
+        /* Enter your code here. Read input from STDIN. Print output to STDOUT. Your class should be named Solution. */
+        BufferedReader buf=new BufferedReader(new InputStreamReader(System.in));
+        int N = Integer.parseInt(buf.readLine());
+        for(int i=0;i<N;i++)
+            {
+            String[] str = buf.readLine().split(" ");
+            
+            
+            int num = Integer.parseInt(buf.readLine());
+        }
+        
+    }
+}

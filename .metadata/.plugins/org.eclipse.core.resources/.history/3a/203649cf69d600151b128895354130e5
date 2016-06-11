@@ -1,0 +1,12 @@
+package com.technical.generic;
+
+public class TreeHeight {
+	
+	public static int findHeight(Tree node)
+	{
+		int lheight = findHeight(node.left);
+		int rheight = findHeight(node.right);
+		return Math.max(lheight,rheight);
+	}
+
+}

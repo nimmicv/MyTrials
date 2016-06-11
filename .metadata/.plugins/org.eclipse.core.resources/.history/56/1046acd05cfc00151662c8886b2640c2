@@ -1,0 +1,22 @@
+package com.technical.hackerranl;
+
+import java.io.*;
+import java.util.*;
+import java.text.*;
+import java.math.*;
+import java.util.regex.*;
+
+public class Sherlock_Minimax {
+
+    public static void main(String[] args) {
+        /* Enter your code here. Read input from STDIN. Print output to STDOUT. Your class should be named Solution. */
+        BufferedReader buf=new BufferedReader(new InputStreamReader(System.in));
+        long N = Long.parseLong(buf.readLine());
+        String[] str = buf.readLine().split(" ");
+        long[] values = new long[N]; 
+        for(int i=0;i<N;i++)
+            {
+            
+        }
+    }
+}

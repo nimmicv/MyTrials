@@ -1,0 +1,14 @@
+package com.technical.generic;
+
+public class SortTrials {
+
+	/**
+	 * @param args
+	 */
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		int[] array = {50,32,12,10,100,80,60,45,300};
+
+	}
+
+}

@@ -1,0 +1,27 @@
+package com.technical.generic;
+
+import java.util.ArrayList;
+
+public class AllPathSum {
+	
+	public static void findAllPathSum(Tree node, ArrayList<Tree> list)
+	{
+		if(node == null)
+		{
+			int sum=0;
+			for(int i=0;i<list.size();i++)
+			{
+				sum = sum + list.get(i).value;
+			}
+			System.out.println("Path Sum = "+ sum);
+			return;
+		}
+		list.add(node);
+		
+		ArrayList<Tree> llist = (ArrayList<Tree>) list.clone();
+		ArrayList<Tree> rlist = (ArrayList<Tree>) list.clone();
+		findAllPathSum(node.left,llist);
+		findAllPathSum(node.right,rlist);
+	}
+
+}

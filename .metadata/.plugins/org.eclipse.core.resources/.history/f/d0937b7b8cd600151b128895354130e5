@@ -1,0 +1,47 @@
+package com.technical.generic;
+
+import java.util.ArrayList;
+
+public class BinaryTree {
+
+	/**
+	 * @param args
+	 */
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		int[] values = {100,45,120,30,50,105,130,20,110,106};
+		Tree root = null;
+		for(int i=0;i<values.length;i++)
+		{
+			root = InsertTree.insert(root,values[i]);
+		}
+		int[] values2 = {100,44,120,30,50,105,130,20,110,106,104};
+		Tree root2 = null;
+		for(int i=0;i<values2.length;i++)
+		{
+			root2 = InsertTree.insert(root2,values2[i]);
+		}
+		System.out.println("Root = "+root.value);
+		System.out.println("Inorder Traversal = ");
+		InorderTraversal.inorderTraveral(root);
+		System.out.println("Inorder Traversal = ");
+		InorderTraversal.inorderTraveral(root2);
+//		System.out.println("Tree Height = "+TreeHeight.findHeight(root));
+//		System.out.println("Tree Width = "+ TreeWidth.findwidth(root));
+		ArrayList<Tree> list = new ArrayList<Tree>();
+		//AllPathSum.findAllPathSum(root, list);
+		AllPathSum.findPathWithSpecificSum(root,list,195);
+		if(MirrorImage.checkIfSameImage(root, root2))
+		{
+			System.out.println("Trees are similar");
+		}
+		else
+		{
+			System.out.println("Trees are not similar");
+		}
+		System.out.println("Leaf Nodes = "+CountLeafNodes.countLeafNodes(root));
+		FindDeepestNode.findDeepest(root);
+		MinimumValDiff.inorderMin(root);
+	}
+
+}

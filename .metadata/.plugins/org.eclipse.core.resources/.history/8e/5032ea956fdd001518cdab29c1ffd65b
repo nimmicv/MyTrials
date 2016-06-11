@@ -1,0 +1,18 @@
+package com.technical.generic;
+
+public class BinarySearch {
+	
+	public int binary_search(int[] array)
+	{
+		int lb = 0;
+		int ub = array.length - 1;
+		while(lb<=ub)
+		{
+			int mid = lb +(ub-lb)/2;
+		}
+		return 0;
+	}
+	
+	
+
+}

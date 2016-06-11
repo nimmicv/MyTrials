@@ -1,0 +1,58 @@
+package com.technical.generic;
+
+import java.util.ArrayList;
+
+public class AllPathSum {
+	
+	public static void findAllPathSum(Tree node, ArrayList<Tree> list)
+	{
+		if(node == null)
+		{	
+			return;
+		}
+		list.add(node);
+		if(node.right == null && node.left == null)
+		{
+			int sum=0;
+			for(int i=0;i<list.size();i++)
+			{
+				sum = sum + list.get(i).value;
+			}
+			System.out.println("Path Sum = "+ sum);
+		}
+		
+		ArrayList<Tree> llist = (ArrayList<Tree>) list.clone();
+		ArrayList<Tree> rlist = (ArrayList<Tree>) list.clone();
+		findAllPathSum(node.left,llist);
+		findAllPathSum(node.right,rlist);
+	}
+	
+	public static void findPathWithSpecificSum(Tree node, ArrayList<Tree> list, int Sumvalue)
+	{
+		if(node == null)
+		{	
+			return;
+		}
+		list.add(node);
+		int sum=0;
+		for(int i=list.size()-1;i>=0;i--)
+		{
+				sum = sum + list.get(i).value;
+				if(sum == Sumvalue)
+				{
+					for(int j=i;j<list.size();j++)
+					{
+						System.out.print(list.get(i).value+" ->");
+					}
+				}
+		}
+		//System.out.println("Path Sum = "+ sum);
+		
+		ArrayList<Tree> llist = (ArrayList<Tree>) list.clone();
+		ArrayList<Tree> rlist = (ArrayList<Tree>) list.clone();
+		findPathWithSpecificSum(node.left,llist,Sumvalue);
+		findPathWithSpecificSum(node.right,rlist,Sumvalue);
+		
+	}
+
+}

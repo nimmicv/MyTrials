@@ -1,0 +1,23 @@
+package com.technical.generic;
+
+public class BinarySearch {
+	
+	public int binary_search_repeated(int[] array,int item)
+	{
+		int lb = 0;
+		int ub = array.length - 1;
+		while(lb<=ub)
+		{
+			int mid = lb +(ub-lb)/2;
+			if(array[mid]==item)
+			{
+				return mid;
+			}
+			
+		}
+		return 0;
+	}
+	
+	
+
+}

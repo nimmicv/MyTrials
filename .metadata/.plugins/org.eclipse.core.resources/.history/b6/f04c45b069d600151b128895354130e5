@@ -1,0 +1,10 @@
+package com.technical.generic;
+
+public class TreeHeight {
+	
+	public static int findHeight(Tree node)
+	{
+		return 0;
+	}
+
+}

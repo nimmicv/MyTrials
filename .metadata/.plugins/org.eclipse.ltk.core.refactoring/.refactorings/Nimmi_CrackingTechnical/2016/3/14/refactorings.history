@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Rename type &apos;com.technical.hackerranl.CoinChange&apos; to &apos;CountingSort&apos;&#x0A;- Original project: &apos;Nimmi_CrackingTechnical&apos;&#x0A;- Original element: &apos;com.technical.hackerranl.CoinChange&apos;&#x0A;- Renamed element: &apos;com.technical.hackerranl.CountingSort&apos;&#x0A;- Update references to refactored element&#x0A;- Update textual occurrences in comments and strings" description="Rename type &apos;CoinChange&apos;" flags="589830" id="org.eclipse.jdt.ui.rename.type" input="/src&lt;com.technical.hackerranl{CoinChange.java[CoinChange" matchStrategy="1" name="CountingSort" qualified="false" references="true" similarDeclarations="false" stamp="1459463488855" textual="false" version="1.0"/>
+</session>

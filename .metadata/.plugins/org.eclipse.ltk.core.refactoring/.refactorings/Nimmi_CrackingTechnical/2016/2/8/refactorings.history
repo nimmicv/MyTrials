@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Rename compilation unit &apos;com.technical.generic.HeapSort.java&apos; to &apos;Heapify.java&apos;&#x0A;- Original project: &apos;Nimmi_CrackingTechnical&apos;&#x0A;- Original element: &apos;com.technical.generic.HeapSort.java&apos;&#x0A;- Renamed element: &apos;com.technical.generic.Heapify.java&apos;" description="Rename compilation unit &apos;HeapSort.java&apos;" flags="2" id="org.eclipse.jdt.ui.rename.compilationunit" input="/src&lt;com.technical.generic{HeapSort.java" name="Heapify.java" references="false" stamp="1455864368451" version="1.0"/>
+</session>
