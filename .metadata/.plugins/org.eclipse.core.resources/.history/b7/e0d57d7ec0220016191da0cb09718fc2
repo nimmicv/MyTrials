@@ -1,0 +1,22 @@
+package com.technical.hackerranl;
+
+import java.io.*;
+import java.util.*;
+import java.text.*;
+import java.math.*;
+import java.util.regex.*;
+
+public class Solution2 {
+
+    public static void main(String[] args) {
+        /* Enter your code here. Read input from STDIN. Print output to STDOUT. Your class should be named Solution. */
+        
+        Scanner in = new Scanner(System.in);
+        String firstWord = in.nextLine();
+        String secondWord = in.nextLine();
+        
+        char[] letters = new char[26];
+        
+        for(int i=0;i<firstword.length)
+    }
+}

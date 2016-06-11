@@ -1,0 +1,27 @@
+package com.technical.generic;
+
+import java.util.ArrayList;
+
+public class BinaryTree {
+
+	/**
+	 * @param args
+	 */
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		int[] values = {100,45,120,30,50,105,130,20,110,106};
+		Tree root = null;
+		for(int i=0;i<values.length;i++)
+		{
+			root = InsertTree.insert(root,values[i]);
+		}
+		System.out.println("Root = "+root.value);
+		InorderTraversal.inorderTraveral(root);
+//		System.out.println("Tree Height = "+TreeHeight.findHeight(root));
+//		System.out.println("Tree Width = "+ TreeWidth.findwidth(root));
+		ArrayList<Tree> list = new ArrayList<Tree>();
+		//AllPathSum.findAllPathSum(root, list);
+		AllPathSum.findPathWithSpecificSum(root,list,195);
+	}
+
+}

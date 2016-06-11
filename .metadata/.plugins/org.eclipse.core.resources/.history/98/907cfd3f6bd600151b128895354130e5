@@ -1,0 +1,14 @@
+package com.technical.generic;
+
+public class TreeWidth {
+	
+	public static int findwidth(Tree node)
+	{
+		int lheight = TreeHeight.findHeight(node.left);
+		int rheight = TreeHeight.findHeight(node.right);
+		int lwidth =findwidth(node.left);
+		int rwidth = findwidth(node.right);
+		return 0;
+	}
+
+}

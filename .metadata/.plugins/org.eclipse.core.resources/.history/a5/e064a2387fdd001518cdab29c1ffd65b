@@ -1,0 +1,66 @@
+package com.technical.generic;
+
+public class BinarySearch {
+	public static void main(String[] args)
+	{
+		int[] array = {34};
+		binary_search_repeated_startIndex(array,34);
+	}
+	public static int binary_search_repeated_startIndex(int[] array,int item)
+	{
+		int startindex=-1;
+		int endindex =-1;
+		int lb = 0;
+		int ub = array.length - 1;
+		while(lb<=ub)
+		{
+			int mid = lb +(ub-lb)/2;
+			if(item>array[mid])
+			{
+				lb=mid+1;
+			}
+			else
+			if(array[mid]<=item)
+			{
+				if(array[mid]==item)
+					startindex = mid;
+				ub = mid-1;
+			}
+
+			
+		}
+		System.out.println("Start index = "+startindex);
+		return startindex;
+	}
+	
+	public static int binary_search_repeated_endIndex(int[] array,int item)
+	{
+		int startindex=-1;
+		int endindex =-1;
+		int lb = 0;
+		int ub = array.length - 1;
+		while(lb<=ub)
+		{
+			int mid = lb +(ub-lb)/2;
+			if(item>=array[mid])
+			{
+				if(array[mid]==item)
+					startindex = mid;
+				lb=mid+1;
+			}
+			else
+			if(array[mid]<item)
+			{
+				
+				ub = mid-1;
+			}
+
+			
+		}
+		System.out.println("Start index = "+startindex);
+		return startindex;
+	}
+	
+	
+
+}

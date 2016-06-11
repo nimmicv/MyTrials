@@ -1,0 +1,15 @@
+package com.technical.generic;
+
+public class AllPathSum {
+	
+	public static int findAllPathSum(Tree node, ArrayList<Tree> list)
+	{
+		if(node == null)
+		{
+			return 0;
+		}
+		findAllPathSum(node.left,list);
+		findAllPathSum(node.right,list);
+	}
+
+}

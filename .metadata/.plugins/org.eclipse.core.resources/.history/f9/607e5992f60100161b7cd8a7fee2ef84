@@ -1,0 +1,151 @@
+package com.technical.twitter;
+
+import java.util.ArrayList;
+import java.util.Collections;
+import java.util.HashMap;
+import java.util.HashSet;
+import java.util.List;
+import java.util.Set;
+
+public class ValidWords {
+
+	/**
+	 * @param args
+	 */
+	static HashSet<String> set = new HashSet<String>();
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		
+		set.add("thank");
+		set.add("you");
+		set.add("youto");
+		set.add("togod");
+		set.add("to");
+		set.add("god");
+		set.add("thankyou");
+		System.out.println(generateString("thankyoutogod"));
+		System.out.println(SegmentString("thankyoutogod",set,new HashMap<String,String>()));
+		wordBreak("thankyoutogod",set);
+		String[] s = {"az","yx"};
+		groupStrings(s);
+	}
+	
+	public static String SegmentString(String input, Set<String> dict,HashMap<String,String> hmap) {
+		  if (dict.contains(input)) 
+			  return input;
+		  if(hmap.containsKey(input))
+		  {
+			  return hmap.get(input);
+		  }
+		  int len = input.length();
+		  for (int i = 1; i < len; i++) {
+		    String prefix = input.substring(0, i);
+		    if (dict.contains(prefix)) {
+		      String suffix = input.substring(i, len);
+		      String segSuffix = SegmentString(suffix, dict,hmap);
+		      if (segSuffix != null) {
+		    	  hmap.put(input, prefix + " " + segSuffix);
+		    	  return prefix + " " + segSuffix;
+		      }
+		    }
+		  }
+		  hmap.put(input, null);
+		  return null;
+		}
+	
+	static HashMap<String,List<String>> map = new HashMap<String,List<String>>();
+    public static List<String> wordBreak(String s, Set<String> wordDict) {
+        List<String> res = new ArrayList<String>();
+        if(s.isEmpty())
+            return res; // return empty list upon empty string
+
+        if(map.containsKey(s))
+            return map.get(s);
+
+        for(int i=0; i<s.length(); i++) {
+            String firstWord = s.substring(0,i+1);
+            if(wordDict.contains(firstWord)) {
+                List<String> rest = wordBreak(s.substring(i+1),wordDict);
+                if(rest.isEmpty()) {
+                    if(i==s.length()-1)
+                        res.add(firstWord);
+                } else {
+                    for(String str : rest)
+                        res.add(firstWord + " " + str);
+                }
+            }
+        } 
+
+        map.put(s,res);
+
+        return res;
+    }
+    
+    public static List<List<String>> groupStrings(String[] strings) {
+        //List<ArrayList<String>> alist = new L<ArrayList<String>>();
+        List<List<String>> alist = new ArrayList<List<String>>();
+        HashMap<String,List<String>> mapr = new HashMap<String,List<String>>();
+        for(String str : strings)
+        {
+          String s = "";
+          int x = str.charAt(0)-'a';
+          for(int i=0;i<str.length();i++)
+          {
+        	  char cur = (char) (str.charAt(i)-x);
+        	  if(cur<'a')
+              {
+                  cur = (char) ('z' - ('a' - cur));
+                  s  = s + cur;
+              }
+              else
+              {
+            	  
+                 s = s + cur;
+              }
+          }
+          if(mapr.containsKey(s))
+          {
+        	  mapr.get(s).add(str);
+          }
+          else
+          {
+              ArrayList<String> lst = new ArrayList<String>();
+              lst.add(str);
+              mapr.put(str,lst);
+          }
+        }
+        
+        for(String strg : mapr.keySet())
+        {
+         Collections.sort(mapr.get(strg)); 
+         alist.add((ArrayList<String>) mapr.get(strg));
+        }
+        return alist;
+        
+    }
+	
+	public static String generateString(String str)
+	{
+		if(str.length()==0)
+		{
+			return "";
+		}
+		//String word = null;
+		for(int i=0;i<=str.length();i++)
+		{
+			String curword = str.substring(0,i);
+			if(set.contains(curword))
+			{
+				String word = generateString(str.substring(i));
+				if(word != null)
+				{
+					word = curword +" " +word;
+					return word;
+				}
+			}
+		}
+		return null;
+	}
+
+	
+}

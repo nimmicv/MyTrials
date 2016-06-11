@@ -1,0 +1,18 @@
+package com.technical.generic;
+
+import java.util.Stack;
+
+public class MinimumValDiff {
+	
+	public void minimumDiff(Tree node)
+	{
+		Stack<Tree> stack = new Stack<Tree>();
+		while(node!=null)
+		{
+			stack.add(node);
+			node = node.left;
+		}
+		
+	}
+
+}

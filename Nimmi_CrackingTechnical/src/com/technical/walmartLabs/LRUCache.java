@@ -1,0 +1,14 @@
+package com.technical.walmartLabs;
+import java.util.*;
+
+public class LRUCache {
+
+	/**
+	 * @param args
+	 */
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		//DoublyLinkedList pageList = new DoublyLinkedList();
+	}
+
+}

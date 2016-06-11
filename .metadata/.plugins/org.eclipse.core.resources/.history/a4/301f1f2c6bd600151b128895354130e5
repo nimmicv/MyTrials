@@ -1,0 +1,10 @@
+package com.technical.generic;
+
+public class TreeWidth {
+	
+	public static int findwidth(Tree node)
+	{
+		return 0;
+	}
+
+}

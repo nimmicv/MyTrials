@@ -1,0 +1,44 @@
+package com.technical.generic;
+
+import java.util.Stack;
+
+public class MinimumValDiff {
+	public static int val1 = Integer.MAX_VALUE;
+	public static int val2 = Integer.MAX_VALUE;
+	public static int diff = Integer.MAX_VALUE;
+	
+	public static void minimumDiff(Tree node)
+	{
+		Stack<Tree> stack = new Stack<Tree>();
+		while(node!=null)
+		{
+			stack.add(node);
+			node = node.left;
+		}
+		while(!stack.isEmpty())
+		{
+			Tree tree_node = stack.pop();
+			System.out.print(tree_node.value+",");
+			if(tree_node.value-val2 < diff)
+			{
+				val1=val2;
+				val2 = tree_node.value;
+				diff = val2-val1;
+			}
+			if(tree_node.right!=null)
+			{
+				node = node.right;
+				while(node!=null)
+				{
+					stack.add(node);
+					node = node.left;
+				}
+			}
+		}
+		
+		System.out.println("Minimum Diff = "+ diff);
+		System.out.println("Values are = "+val1+" - "+ val2);
+		
+	}
+
+}

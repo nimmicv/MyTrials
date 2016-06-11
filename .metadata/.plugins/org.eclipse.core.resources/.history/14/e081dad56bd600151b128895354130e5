@@ -1,0 +1,10 @@
+package com.technical.generic;
+
+public class AllPathSum {
+	
+	public static void findAllPathSum(Tree node)
+	{
+		
+	}
+
+}

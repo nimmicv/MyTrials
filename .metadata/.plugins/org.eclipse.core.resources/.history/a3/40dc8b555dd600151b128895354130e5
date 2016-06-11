@@ -1,0 +1,9 @@
+package com.technical.generic;
+
+public class InorderTraversal {
+
+	public static void inorderTraveral(Tree node)
+	{
+		
+	}
+}

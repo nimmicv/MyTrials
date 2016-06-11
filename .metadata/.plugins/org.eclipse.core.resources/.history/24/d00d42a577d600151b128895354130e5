@@ -1,0 +1,15 @@
+package com.technical.generic;
+
+public class FindDeepestNode {
+	
+	public static void findDeepest(Tree node)
+	{
+		findDeepest(node.left)
+	}
+	
+	private static void findDeeper(Tree node)
+	{
+		
+	}
+
+}
